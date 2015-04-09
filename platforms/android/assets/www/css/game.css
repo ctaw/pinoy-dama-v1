@@ -1,0 +1,15 @@
+html,body{
+  background-color: #d8f5f8;
+}
+
+.btn-upper{
+  color: #000 !important;
+  background-color: #F2F2F2
+}
+.navbar-default {
+  background-color: #4D4D4D;
+  border-color: #e7e7e7;
+}
+.navbar-default .navbar-brand {
+  color: #fff;
+}

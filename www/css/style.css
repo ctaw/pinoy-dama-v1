@@ -1,0 +1,46 @@
+
+#board {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#score_card {
+  position: absolute;
+  margin-top: 60px;
+}
+
+#restart_game {
+  border-radius:0px;
+}
+
+.player {
+  float:left;
+  border-radius:0px;
+  margin:5px;
+  text-align:center;
+  font-weight:bold;
+  font-size:18px;
+  margin-left: 10px;
+}
+
+#whosturn {
+  background-color: #46b8da;
+  position:absolute;
+  padding: 5px;
+  border-radius:0px;
+  text-align:center;
+  font-weight:bold;
+  font-size:18px;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#no_html5 {
+  color:#FF0000;
+  font-size:larger;
+}

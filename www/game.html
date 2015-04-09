@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+  
+    <title>Pinoy Dama</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+
+    
+    <!-- MODIFIED CSS -->
+    <link rel="stylesheet" type="text/css" href="css/game.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <!-- Bootstrap JS -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="js/params.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript">
+    function onConfirmQuit(){
+       // navigator.app.exitApp();
+        var r = confirm("Exit Game?");
+        if (r == true) {
+            navigator.app.exitApp();
+        } else {
+            return true;
+        }
+    }
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="btn-group pull-right" role="group" aria-label="...">
+            <a href="#" onclick='onConfirmQuit(); return false;' class="navbar-toggle collapsed btn-upper"><i class="fa fa-power-off"></i></a>
+            <a href="#" onclick='restartGame(); return false;' class="navbar-toggle collapsed btn-upper"><i class="fa fa-refresh"></i></a>
+          </div>
+          <a class="navbar-brand" href="#">Pinoy Dama</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Your Code Starts Here -->
+    <section id="main-container" class="main-container">
+      <div class="container">
+        <div class="row">
+          <canvas id="board"></canvas>
+          <div id="score_card"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Your Code Ends Here -->
+    <script type="text/javascript">
+        setTimeout("initializeGame()",750);
+    </script>
+
+    <script>
+      var player1 = GetUrlValue('playerOne');
+      var player2 = GetUrlValue('playerTwo');
+
+      $("#pOne").text(player1);
+      $("#pTwo").text(player2);
+    </script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+  </body>
+</html>

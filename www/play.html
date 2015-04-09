@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+  
+  
+    <title>Pinoy Dama</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+
+    
+    <!-- MODIFIED CSS -->
+    <link rel="stylesheet" type="text/css" href="css/modified.css" />
+
+    <!-- Bootstrap JS -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+  </head>
+  <body>
+
+    <!-- Your Code Starts Here -->
+    <div class="container-fluid">
+      <div class="row colored" id="row">
+        <div class="contcustom">
+          <img src="img/logo.png">
+          <h2>Pinoy Dama</h2>
+          <div>
+              <input type="text" placeholder="Player 1" id="playerOne">
+              <input type="text" placeholder="Player 2" id="playerTwo">
+              <button class="btn btn-default wide" id="playerBtn"><span class="fa fa-check med"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Your Code Ends Here -->
+
+    <script>
+      $("#playerBtn").click(function() {
+
+        var playerOne = document.getElementById('playerOne').value;
+        var playerTwo = document.getElementById('playerTwo').value;
+
+        window.location = 'game.html?playerOne=' + playerOne + '&playerTwo=' + playerTwo + '';
+      });
+    </script>
+
+    <!--<script type="text/javascript" src="cordova.js"></script>-->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+  </body>
+</html>
