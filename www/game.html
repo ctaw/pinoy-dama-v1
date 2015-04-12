@@ -25,8 +25,11 @@
 
     <script type="text/javascript" src="js/params.js"></script>
     <script type="text/javascript" src="js/game.js"></script>
+
+    <script type="text/javascript" src="js/speech.js"></script>
+
     <script type="text/javascript">
-    function onConfirmQuit(){
+      function onConfirmQuit(){
        // navigator.app.exitApp();
         var r = confirm("Exit Game?");
         if (r == true) {
@@ -34,7 +37,7 @@
         } else {
             return true;
         }
-    }
+      }
     </script>
   </head>
   <body>
@@ -54,6 +57,7 @@
     <section id="main-container" class="main-container">
       <div class="container">
         <div class="row">
+          <!-- <dialog id="myDialog">This is a dialog window</dialog> -->
           <canvas id="board"></canvas>
           <div id="score_card"></div>
         </div>

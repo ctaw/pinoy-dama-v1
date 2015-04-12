@@ -11,6 +11,16 @@
   position: absolute;
   margin-top: 60px;
 }
+#speech{
+  position: absolute;
+  margin-top: 100px;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius:0px;
+  width: 100px;
+}
 
 #restart_game {
   border-radius:0px;

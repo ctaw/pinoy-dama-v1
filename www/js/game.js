@@ -44,6 +44,7 @@ function initializeGame()
     scoreCard.innerHTML += "<div id='player_1' class='player'>"+ player1 +": <span id='player_one_score'></span></div>";
     scoreCard.innerHTML += "<div id='player_2' class='player'>"+ player2 +": <span id='player_two_score'></span></div>";
     scoreCard.innerHTML += "<div id='whosturn'></div>";
+    scoreCard.innerHTML += "<div id='speech' onclick='voiceCommand(); return false;' class='btn btn-warning btn-default'>Command</div>";
     
     // Add the footer text
     // var footer = document.getElementsByTagName("footer")[0];

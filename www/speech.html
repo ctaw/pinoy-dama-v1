@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Voix JS Component</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <style>
+            body {
+                font-family: "Helvetica Neue", Helvetica, Arial, serif;
+                margin: 0;
+            }
+
+            header {
+                padding: 150px 0;
+                color: #FFF;
+            }
+
+            a {
+                color: #E74C3C;
+            }
+
+            h1 {
+                font-size: 10em;
+                line-height: 1em;
+                color: #FFF;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .subtitle {
+                font-size: 2.5em;
+                width: 60%;
+                margin: 50px auto;
+                padding: 20px;
+                text-align: center;
+                background-color: rgba(0,0,0,.5);
+            }
+
+            footer {
+                margin: 30px auto;
+                text-align: center;
+            }
+
+            .heart {
+                font-style: normal;
+                font-weight: 500;
+                color: #c0392b;
+                text-decoration: none;
+            }
+
+            #twitter {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }
+
+            #github-button {
+                display: block;
+                margin: 30px auto 0;
+                position: relative;
+                left: 40px;
+            }
+
+            #github-ribbon {
+                display: inline-block;
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 100;
+                border: 0;
+                width: 149px;
+                height: 149px;
+            }
+
+            .github-buttons {
+                text-align: center;
+                margin: 1em 0;
+            }
+
+            .box {
+                display: inline-block;
+                margin: 15px;
+                width: 28%;
+                height: 200px;
+                line-height: 200px;
+                text-align: center;
+                font-size: 25px;
+                color: #fff;
+            }
+
+            #color-example {
+                -webkit-transition: background-color 300ms ease-in-out;
+                transition: background-color 300ms ease-in-out;
+            }
+
+            #color-example ul {
+                text-align: center;
+            }
+
+            .red {
+                background-color: #e74c3c !important;
+            }
+
+            .blue {
+                background-color: #3498db !important;
+            }
+
+            .yellow {
+                background-color: #f1c40f !important;
+            }
+
+            .green {
+                background-color: #2ecc71 !important;
+            }
+
+            .violet {
+                background-color: #9b59b6 !important;
+            }
+
+            .orange {
+                background-color: #e67e22 !important;
+            }
+
+            section {
+                margin: 0 20px 50px;
+                text-align: center;
+            }
+
+            button {
+                padding: 12px 18px 13px;
+                border-radius: 6px;
+                background-color: #415B76;
+                line-height: 200px;
+                text-align: center;
+                font-size: 2em;
+                line-height: 1em;
+                color: #FFF;
+                cursor: pointer;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="js/voix.js"></script>
+        
+        <section>
+            <h2>Choose a language</h2>
+            <button id="en">English</button>
+            <button id="es">Español</button>
+        </section>
+
+        <section>
+            <h2>Press "v" key and pick a color</h2>
+            <div id="color-example">
+                <ul>
+                    <li class="box red">Red | Rojo</li>
+                    <li class="box blue">Blue | Azul</li>
+                    <li class="box yellow">Yellow | Amarillo</li>
+                    <li class="box green">Green | Verde</li>
+                    <li class="box violet">Violet | Violeta</li>
+                    <li class="box orange">Orange | Naranja</li>
+                </ul>
+            </div>
+        </section>
+
+        <script>
+            $("#en").click(function() {
+                
+
+                var en = new Voix('en-US');
+
+                en.setCommand('red', function () {
+                        document.querySelector('#color-example').className = 'red';
+                    })
+                    .setCommand('blue', function () {
+                        document.querySelector('#color-example').className = 'blue';
+                    })
+                    .setCommand('yellow', function () {
+                        document.querySelector('#color-example').className = 'yellow';
+                    })
+                    .setCommand('green', function () {
+                        document.querySelector('#color-example').className = 'green';
+                    })
+                    .setCommand('violet', function () {
+                        document.querySelector('#color-example').className = 'violet';
+                    })
+                    .setCommand('orange', function () {
+                        document.querySelector('#color-example').className = 'orange';
+                    });
+            });
+            
+
+        </script>
+    </body>
+</html>
